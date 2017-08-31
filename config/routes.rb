@@ -18,7 +18,8 @@ Rails.application.routes.draw do
     resources :categories, except: [:edit, :update, :show]
   end
 
-  resources :register, only: [:index, :create]
+  resources :users, only: [:index, :create, :new]
+
   resources :login, only: [:index, :create]
   resources :logout, only: [:destroy]
 
