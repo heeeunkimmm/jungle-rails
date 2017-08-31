@@ -1,3 +1,27 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
-<p>this is a login page</p>
+
+<section class="users-login">
+
+  <header class="page-header">
+    <h1>Users &raquo; Login</h1>
+  </header>
+
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-1">
+      <%= form_tag '/login' do %>
+
+        <div class="form-group">
+          Email:
+          <%= text_field_tag :email %>
+        </div>
+
+        <div class="form-group">
+          Password:
+          <%= password_field_tag :password %>
+        </div>
+
+        <%= submit_tag "Log in", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+
+</section>

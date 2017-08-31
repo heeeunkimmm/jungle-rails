@@ -44,6 +44,13 @@
             <%= fa_icon "shopping-cart" %> My Cart (<%= cart.size %>)
           <% end %>
         </li>
+        <% if current_user %>
+          <li class="navbar-text"> Signed in as <%= current_user.first_name %> </li>
+          <li> <a href="/logout"> Logout </a> </li>
+        <% else %>
+          <li> <a href="/users/new"> Register </a> </li>
+          <li> <a href="/login"> Login </a> </li>
+        <% end %>
       </ul>
     </div>
   </div>
