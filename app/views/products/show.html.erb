@@ -26,6 +26,26 @@
       </div>
     </div>
 
+    <div> <h2> Product Reviews </h2> </div>
+    <div>
+      <table style="width:80%">
+        <tr>
+          <th>username</th>
+          <th>Review</th>
+          <th>Rating</th>
+        </tr>
+        <tr>
+          <% @product.reviews.each do |review| %>
+            <tr>
+              <td><%= review.user.first_name %></td>
+              <td><%= review.description %></td>
+              <td><%= review.rating %></td>
+            </tr>
+          <% end %>
+        </tr>
+      </table>
+    </div>
+
   </article>
 
 </section>
