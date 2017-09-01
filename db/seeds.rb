@@ -134,5 +134,9 @@ cat3.products.create!({
 
 ## PRODUCTS
 
+Review.create(product_id: 1, user_id: 1, description: "This is a really good shirt", rating: 5)
+Review.create(product_id: 1, user_id: 2, description: "Not bad, I'll give it a 3", rating: 3)
+Review.create(product_id: 2, user_id: 1, description: "Really bad product. Don't buy.", rating: 1)
+
 
 puts "DONE!"
