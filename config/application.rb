@@ -15,6 +15,8 @@ require "rails/test_unit/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+# YAML.load(File.read(File.expand_path('../secrets.yml', __FILE__)))
+
 module Jungle
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.

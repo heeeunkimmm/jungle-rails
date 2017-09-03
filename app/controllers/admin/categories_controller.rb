@@ -1,7 +1,7 @@
 class Admin::CategoriesController < ApplicationController
 
-USER_ID= ENV['ADMIN_USERNAME']
-PASSWORD= ENV['ADMIN_PASSWORD']
+USER_ID= ENV["ADMIN_USERNAME"]
+PASSWORD= ENV["ADMIN_PASSWORD"]
 
 before_filter :authenticate
 
