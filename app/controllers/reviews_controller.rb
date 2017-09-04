@@ -8,7 +8,7 @@ class ReviewsController < ApplicationController
         flash[:success] = "Your review has been successfully submitted!"
         redirect_to :back
       else
-        render :template => 'products/show'
+        redirect_to :back
       end
   end
 
