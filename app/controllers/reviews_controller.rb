@@ -27,7 +27,7 @@ class ReviewsController < ApplicationController
     @product = Product.find(params[:product_id])
     @review = Review.find params[:id]
     @review.destroy
-    flash[:sucess] = "Review deleted!"
+    flash[:success] = "Review deleted!"
     redirect_to :back
   end
 

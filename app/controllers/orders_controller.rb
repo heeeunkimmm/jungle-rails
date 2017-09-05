@@ -2,7 +2,6 @@ class OrdersController < ApplicationController
 
   def show
     @order = Order.find(params[:id])
-
   end
 
   def create
@@ -11,8 +10,9 @@ class OrdersController < ApplicationController
 
     if order.valid?
       empty_cart!
-      OrderMailer.order_receipt(@order).deliver_later
-      redirect_to order, notice: 'Your Order has been placed.'
+      OrderMailer.order_receipt(order).deliver_later
+      flash[:success] = 'Your order has been placed.'
+      redirect_to order
     else
       redirect_to cart_path, flash: { error: order.errors.full_messages.first }
     end

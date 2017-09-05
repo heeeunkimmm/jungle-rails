@@ -17,6 +17,7 @@ Bundler.require(*Rails.groups)
 
 # YAML.load(File.read(File.expand_path('../secrets.yml', __FILE__)))
 
+
 module Jungle
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
@@ -39,5 +40,7 @@ module Jungle
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    config.action_mailer.preview_path = "#{Rails.root}/test/mailers/previews"
+
   end
 end
