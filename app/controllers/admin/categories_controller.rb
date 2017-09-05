@@ -38,7 +38,6 @@ class Admin::CategoriesController < ApplicationController
   end
 
   def authenticate
-    puts "hell yes I am running"
     authenticate_or_request_with_http_basic do |id, password|
       id == USER_ID && password == PASSWORD
     end
